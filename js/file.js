@@ -45,29 +45,14 @@ const changeBackColor = (elementId, color) => {
 
 const assignActive = () => {
     let lis = document.querySelectorAll("#active-list > li");
-    //console.log(lis); // nodelist ok
-    let random = Math.floor(Math.random() * (lis.length));
-    //console.log(random); // randomiza ok
-    lis[random].classList.toggle("active");
-    //console.log(lis[random]); 
     for (let i = 0; i < lis.length; i++) {
-        if (lis[i].classList.contains("active")) {
-            if (i < lis.length) {
-                for (let j = i+1; j < lis.length; j++) {
-                    lis[j].classList.remove("active");
-                }
-            }
-            else {
-                lis[lis.length-1].classList.remove("active");
-            }
-            
-        }            
+        lis[i].classList.remove("active");
     }
+    let random = Math.floor(Math.random() * (lis.length));
+    console.log(random);
+    lis[random].classList.toggle("active");
 }
-
-//funciona a medias, a veces ningún elemento queda en active. 
-//a veces se traba en un elemento fijo, aunque el random indique otra cosa.
-
+//corrección en base a lo visto en clase
 
 // 004 /////////////////////////////////////////////////////
 
