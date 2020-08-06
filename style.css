@@ -1,0 +1,9 @@
+.img-item {
+    display: none;
+}
+
+.active {
+    background-color: darkblue;
+    color: cyan;
+    font-weight: 800;
+}
